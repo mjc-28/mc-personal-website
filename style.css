@@ -26,6 +26,7 @@ body {
   color: var(--text-color);
 }
 
+/*HEADER ELEMENT*/
 .header {
   position: fixed;
   width: 100%;
@@ -51,11 +52,13 @@ body {
 .logo {
   font-size: 3rem;
   color: var(--text-color);
+  /*changes the boldness of the text*/
   font-weight: 800;
   /*to show the user that the logo is clickable*/
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+
 /*when hover over logo it will appear slightly bigger*/
 .logo:hover {
   transform: scale(1.1);
@@ -83,6 +86,7 @@ span {
   /*creating an underline effect*/
   border-bottom: 3px solid transparent;
 }
+
 .navBar a:hover {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
@@ -104,4 +108,85 @@ span {
 
 .gradientButton:hover {
   transform: scale(1.1);
+}
+
+/*ALL SECTIONS*/
+section {
+  /*make section cover entire page*/
+  min-height: 100vh;
+  padding: 10rem 15%;
+}
+
+/*HOME SECTION*/
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.homeInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.homeInfo h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  /*controls vertical space btwn lines of text*/
+  line-height: 1;
+}
+
+.homeInfo h3 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.homeInfo p {
+  padding: 2rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.homePic img {
+  width: 32vw; /*img will be 32% of viewport width; helps with responsiveness*/
+  border-radius: 60% 40%;
+  /*to create a glowing effect when hovering over img*/
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+.homePic img:hover {
+  box-shadow:
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+
+/*all buttons will look like this*/
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+.btn {
+  display: inline-block; /*allow elements to be next to each other while still having block space*/
+  padding: 1rem 3rem;
+  background-color: var(--main-color);
+  border-radius: 3rem;
+  box-shadow: 0 0 25px var(--main-color);
+  font-size: 1.8rem;
+  color: var(--text-color);
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
 }
