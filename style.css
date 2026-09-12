@@ -5,15 +5,15 @@
   box-sizing: border-box;
   text-decoration: none;
   scroll-behavior: smooth;
-  font-family: "Poppins";
+  font-family: "DM Serif Display", serif;
 }
 
 /*setting colors that will be used frequently*/
 :root {
-  --bg-color: darkslateblue;
-  --second-bg-color: lightslategray;
+  --bg-color: whitesmoke;
+  --second-bg-color: lightgray;
   --text-color: black;
-  --main-color: darkorchid;
+  --main-color: mediumpurple;
 }
 
 html {
@@ -33,7 +33,7 @@ body {
   left: 0;
   padding: 4rem 15%; /*using rem for when user changes to perferred text size (accessibility); 4rem is 4 x root font size (default: 16px)*/
   /*used for the bg effect*/
-  background: rgba(71, 61, 139, 0.3);
+  background: rgba(245, 245, 245, 0.3);
   backdrop-filter: blur(10px);
   /*putting space btwn the elements*/
   display: flex;
@@ -54,4 +54,54 @@ body {
   font-weight: 800;
   /*to show the user that the logo is clickable*/
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+/*when hover over logo it will appear slightly bigger*/
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/*createing gradient effect for span*/
+span {
+  /* 270deg: basically means grad goes from left to right
+    1st color: ending color
+    2nd color: starting color
+  */
+  background: linear-gradient(270deg, steelblue 10%, var(--main-color) 100%);
+  /*clip text to the background*/
+  background-clip: text;
+  /*make it invis to see through text*/
+  color: transparent;
+}
+
+.navBar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3 ease-in-out;
+  /*creating an underline effect*/
+  border-bottom: 3px solid transparent;
+}
+.navBar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.gradientButton {
+  font-size: 1.8rem;
+  padding: 1rem /*top/bottom*/ 2rem /*left/right*/;
+  border-radius: 4rem;
+  background: linear-gradient(270deg, steelblue 10%, var(--main-color) 100%);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: var(--text-color);
+  border: none;
+  /*nowrap: needed when viewport gets smaller letters/words wont wrap to next line*/
+  text-wrap: nowrap;
+}
+
+.gradientButton:hover {
+  transform: scale(1.1);
 }
