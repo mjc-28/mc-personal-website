@@ -10,8 +10,8 @@
 
 /*setting colors that will be used frequently*/
 :root {
-  --bg-color: whitesmoke;
-  --second-bg-color: lightgray;
+  --bg-color: white;
+  --second-bg-color: ghostwhite;
   --text-color: black;
   --main-color: mediumpurple;
 }
@@ -189,4 +189,92 @@ section {
     0 0 25px var(--main-color),
     0 0 50px var(--main-color),
     0 0 100px var(--main-color);
+}
+
+/*SKILLS SECTION*/
+.skillHeading {
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+
+.skills {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.skills h2 {
+  color: var(--text-color);
+}
+
+.skillSection {
+  display: grid;
+  /*instead of hardcoding a number of columns*/
+  /*minimax: sets smallest size of card*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /*1 fraction of space*/
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.skillCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 600px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+.skillCard:hover {
+  background: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+
+.skillInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.skillInfo h4 {
+  font-size: 4rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.skillInfo p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.skillInfo i {
+  font-size: 8rem;
+}
+
+/*CHANGING THE SCROLLBAR*/
+
+/*the entire scrollbar*/
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/*the draggable scrolling handle*/
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+/*the progress bar of the scrollbar*/
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
 }
