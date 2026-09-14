@@ -10,3 +10,6 @@ While following the video, I am trying my best to add and change things, so the 
 9/12/26
 -leanred more about customizing the scrollbars through the video and this: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar
 -decided to take out the About Section becasue I felt like too much information would be repeated between the home, about, and skills pages.
+
+9/13/26
+-Just finished up the beginnings of my website! I will continue to add/change things on it to make it more unique and to my liking!

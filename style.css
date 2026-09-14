@@ -262,6 +262,108 @@ section {
   font-size: 8rem;
 }
 
+/*PROJECTS SECTION*/
+.projects {
+  background-color: var(--second-bg-color);
+}
+
+.projectSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  place-items: center;
+  gap: 3rem;
+  row-gap: 5rem;
+}
+
+.projectHeading h2 {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+
+.projectCard:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 0 25px var(--main-color),
+    0 0 50px var(--main-color);
+}
+
+.projectCard img {
+  max-width: 300px;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.projectCard h3 {
+  font-size: 3rem;
+}
+
+.projectCard p {
+  font-size: 1.6rem;
+}
+
+/*CONTACT SECTION*/
+.contact {
+  background-color: var(--bg-color);
+}
+
+.contact h2 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+/*changing both types of input*/
+.contact form .inputBox input,
+.contact form textarea {
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  /*don't want text area to be resizable*/
+  resize: none;
+}
+
+/*styling the footer*/
+.footer {
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+
+.footer .socialIcons {
+  text-align: center;
+}
+
 /*CHANGING THE SCROLLBAR*/
 
 /*the entire scrollbar*/
@@ -277,4 +379,71 @@ section {
 /*the progress bar of the scrollbar*/
 ::-webkit-scrollbar-track {
   background-color: var(--bg-color);
+}
+
+/*breakpoint for where website will change based on screen size*/
+@media (max-width: 1024px) {
+  #menuIcon {
+    display: block;
+  }
+  .navBar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: rgba(245, 245, 245, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+  }
+  .navBar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem;
+    color: var(--text-color);
+  }
+  .navBar.active {
+    display: block;
+  }
+
+  .gradientButton {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+
+  .homeInfo {
+    align-items: center;
+    text-align: center;
+  }
+
+  .homePic img {
+    width: 56vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .about img {
+    width: 56vw;
+  }
+
+  /*nothing has to change with Skills and Projects because they already respond to size of screen*/
+
+  .contact form {
+    flex-direction: column;
+  }
 }
